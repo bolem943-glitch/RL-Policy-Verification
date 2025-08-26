@@ -1,0 +1,8 @@
+P = ?[F "goal"]
+
+P = ? [!"goal" U "danger"]
+
+ P=? [ !"danger" U "goal" ] 
+
+R{"path"}=? [ F "goal" ]
+
