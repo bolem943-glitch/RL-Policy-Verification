@@ -21,3 +21,43 @@ The work explores how **reinforcement learning (RL) policies** can be exported a
 Install Python dependencies:
 ```bash
 pip install -r requirements.txt
+
+How to Run
+
+Train an agent:
+
+python main.py
+
+
+Export the learned policy to PRISM:
+
+python export_to_prism.py
+
+
+Run verification in PRISM:
+
+Open the generated .prism model file.
+
+Execute provided queries (examples in queries.pctl).
+
+📂 Repository Structure
+├── agent.py              # Q-learning agent
+├── environment.py        # GridWorld environment
+├── export_to_prism.py    # Export policy to PRISM model
+├── main.py               # Training and evaluation script
+├── policy_model.prism    # Example PRISM model
+├── sto_*                 # Stochastic versions of code
+├── test/                 # Testing folder
+└── README.md             # Project documentation
+
+📊 Example Results
+
+Deterministic policy converges faster but is less robust under noise.
+
+Stochastic policies provide better safety guarantees but may require more training.
+
+PRISM verification confirms theoretical guarantees of reachability and safety.
+
+📄 License
+
+This project is released under the MIT License.
